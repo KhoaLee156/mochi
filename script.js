@@ -1,20 +1,20 @@
-let emotion = localStorage.getItem('mochiEmotion') || '😊';
-document.getElementById('emotion').textContent = emotion;
-
-function updateEmotion(newEmotion) {
-  emotion = newEmotion;
-  localStorage.setItem('mochiEmotion', emotion);
-  document.getElementById('emotion').textContent = emotion;
+function setMochiEmotion(image) {
+  const mochi = document.getElementById('mochi-img');
+  mochi.src = image;
+  mochi.style.transform = "scale(1.05)";
+  setTimeout(() => {
+    mochi.style.transform = "scale(1)";
+  }, 300);
 }
 
 function feed() {
-  updateEmotion('😋');
+  setMochiEmotion("mochi-feed.png");
 }
 
 function play() {
-  updateEmotion('😄');
+  setMochiEmotion("mochi-play.png");
 }
 
 function sleep() {
-  updateEmotion('😴');
+  setMochiEmotion("mochi-sleep.png");
 }
