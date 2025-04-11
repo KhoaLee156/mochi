@@ -1,34 +1,37 @@
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #cceeff, #f0f8ff);
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   text-align: center;
-  padding: 20px;
+  color: #333;
 }
 
 .container {
+  background-color: rgba(255, 255, 255, 0.85);
   max-width: 500px;
-  margin: auto;
-  background: #fffbe6;
+  margin: 40px auto;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-#mochi {
-  width: 150px;
+#mochi-img {
+  width: 200px;
+  transition: transform 0.3s ease;
 }
 
-.actions button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
-  border-radius: 12px;
-  background-color: #8fd694;
-  color: white;
+.actions {
+  margin-top: 20px;
+}
+
+.actions img {
+  width: 60px;
+  margin: 0 10px;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.actions button:hover {
-  background-color: #6fbe72;
+.actions img:hover {
+  transform: scale(1.2);
 }
